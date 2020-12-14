@@ -76,10 +76,6 @@ void sched_print(void* obj)
 
 
 
-
-
-
-
 //generating a structure of scheduling information
 void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 {
@@ -99,12 +95,18 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 float sched_getMonth(void* obj)
 {
 	
+	printf("----------------------------------------\n");
+	printf("1. Schedule Name : %s (%d)\n", ); // 내용, 유형  
+	printf("2. When : %d. %d\n", month,  ); // 월, 일   
+	printf("3. Where : %s\n", ); // 장소 
+	
 }
 
 
 //get type information from the scheduler info structure
 int sched_getType(void* obj)
 {
+	printf("----------------------------------------\n");
 	
 }
 
@@ -113,12 +115,17 @@ int sched_getType(void* obj)
 //get place string information from the scheduler info structure
 char* sched_getPlace(void* obj)
 {
+	printf("----------------------------------------\n");
 
 }
 
 //convert the name of the type into the enum(integer) value
 int sched_convertType(char* typeName)
 {
+	char *scheduleType_c[] = {drama, movie, advertisement, enertainment, meeting, fitness, privacy}; // 포인터 이용하여 문자열 구현 
+	
+	scheduleType_e = scheduleType_c[scheduleType_e]; // 0 = drama, 1= movie, 2= advertisement ... 
+	  
 	
 }
 

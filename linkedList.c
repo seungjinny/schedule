@@ -223,7 +223,7 @@ int list_len(void* list)
 	}
 	
 	while ( list_isEndNode(listPtr) == 0 )//travel until it is the end node
-	{
+	{o
 		listPtr = listPtr->next; //travel once
 		len++;//increase the length variable
 	}

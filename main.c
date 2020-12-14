@@ -48,8 +48,7 @@ int main(int argc, char *argv[]) {
 		list_addTail(schedInfo, list);
 	}
 	
-	
-	//fill code here ---- close the file pointer
+	fclose(fp);
 	
 	printf("Read done! %i schedules are read\n", list_len(list));
 	
@@ -58,11 +57,16 @@ int main(int argc, char *argv[]) {
 	while(exit_flag == 0) 
 	{
 		//3. menu printing
-		//fill code here ---- 
+		printf("1. print all the schedules\n");
+		printf("2. search for schedules in the month\n");
+		printf("3. search for schedules in the place\n");
+		printf("4. search for specific type schedule\n");
+		printf("5. exit");
 		
 		//4. get option from keyboard
-		//fill code here ----
-		
+		 
+		printf(" select an option: ");
+		scanf("%d", &option);
 		
 		switch(option)
 		{
