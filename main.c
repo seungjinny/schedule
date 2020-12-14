@@ -76,8 +76,11 @@ int main(int argc, char *argv[]) {
 				ndPtr = list; 
 				while (list_isEndNode(ndPtr) == 0)
 				{
-					//file code here -- print count and each scheduling info element
+					printf("----------------------------------------\n");
+					//print count and each scheduling info element
+					printf("%d", list);
 					
+					sched_print(void* obj); // sched_print 함수 불러와서 schedule print 하기  
 					
 					ndPtr = list_getNextNd(ndPtr); //get the next node from the list
 					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
@@ -94,11 +97,12 @@ int main(int argc, char *argv[]) {
 				ndPtr = list;
 				while (list_isEndNode(ndPtr) == 0)
 				{
-					//print scheduling info elements matching to the month
 					printf("----------------------------------------\n");
-					printf("%d. Schedule Name : %s (%d)\n",ndPtr , strncpy( schedInfo, ndPtr, strlen(ndPtr)), sched_convertType (*typeName) ); // 내용, 유형  
-					printf("When : %d. %d\n", month, strncpy(schedInfo, ndPtr, strlen(ndPtr))  ); // 월, 일   
-					printf("Where : %s\n", strncpy(schedInfo, ndPtr, strlen(ndPtr)) ); // 장소 
+					//print scheduling info elements matching to the month
+					printf("%d", list);
+					
+					sched_getMonth(void* obj) 
+					sched_print(void* obj); // sched_print 함수 불러와서 schedule print 하기  
 					
 					ndPtr = list_getNextNd(ndPtr); //get the next node from the list
 					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
@@ -117,11 +121,12 @@ int main(int argc, char *argv[]) {
 				ndPtr = list;
 				while (list_isEndNode(ndPtr) == 0)
 				{
-					//print scheduling info elements matching to the place
 					printf("----------------------------------------\n");
-					printf("%d. Schedule Name : %s (%d)\n", ndPtr, strncpy( schedInfo, ndPtr, strlen(ndPtr)), sched_convertType (*typeName) ); // 내용, 유형  
-					printf("When : %d. %d\n",strncpy(schedInfo, ndPtr, strlen(ndPtr)) ,strncpy(schedInfo, ndPtr, strlen(ndPtr))  ); // 월, 일   
-					printf("Where : %s\n", place ); // 장소 
+					//print scheduling info elements matching to the place
+					printf("%d", list);
+					
+					sched_getPlace(void* obj) 
+					sched_print(void* obj); // sched_print 함수 불러와서 schedule print 하기  
 					
 					ndPtr = list_getNextNd(ndPtr); //get the next node from the list
 					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
@@ -142,11 +147,12 @@ int main(int argc, char *argv[]) {
 					ndPtr = list;
 					while (list_isEndNode(ndPtr) == 0)
 					{
-						//print scheduling info elements matching to the place
 						printf("----------------------------------------\n");
-						printf("%d. Schedule Name : %s (%d)\n", ndPtr, typeName, sched_convertType (*typeName) ); // 내용, 유형  
-						printf("When : %d. %d\n", ,  ); // 월, 일   
-						printf("Where : %s\n", ); // 장소
+						//print scheduling info elements matching to the place
+						printf("%d", list);
+					
+						sched_getType(void* obj) 
+						sched_print(void* obj); // sched_print 함수 불러와서 schedule print 하기  
 						
 						ndPtr = list_getNextNd(ndPtr); //get the next node from the list
 						schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
