@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 	
 	
 	//2. read from the file
-	while ( /* fill code here -- read from the file*/ )
+	while ( fgets(*schedInfo, 100, fp) != NULL )
 	{	
 		//fill code here -- generate genSchedInfo structure by genSchedInfo function
 		
@@ -73,10 +73,12 @@ int main(int argc, char *argv[]) {
 			case 1: //print all the schedules
 				printf("printing all the schedules in the scheduler.....\n\n\n");
 				
-				ndPtr = list;
+				ndPtr = list; 
 				while (list_isEndNode(ndPtr) == 0)
 				{
 					//file code here -- print count and each scheduling info element
+					
+					
 					ndPtr = list_getNextNd(ndPtr); //get the next node from the list
 					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
 					
@@ -92,9 +94,16 @@ int main(int argc, char *argv[]) {
 				ndPtr = list;
 				while (list_isEndNode(ndPtr) == 0)
 				{
-					//file code here -- print scheduling info elements matching to the month
+					//print scheduling info elements matching to the month
+					printf("----------------------------------------\n");
+					printf("%d. Schedule Name : %s (%d)\n",ndPtr , strncpy( schedInfo, ndPtr, strlen(ndPtr)), sched_convertType (*typeName) ); // 내용, 유형  
+					printf("When : %d. %d\n", month, strncpy(schedInfo, ndPtr, strlen(ndPtr))  ); // 월, 일   
+					printf("Where : %s\n", strncpy(schedInfo, ndPtr, strlen(ndPtr)) ); // 장소 
+					
 					ndPtr = list_getNextNd(ndPtr); //get the next node from the list
 					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
+					
+					
 					
 					//fill code this part - end
 				}
@@ -108,7 +117,12 @@ int main(int argc, char *argv[]) {
 				ndPtr = list;
 				while (list_isEndNode(ndPtr) == 0)
 				{
-					//file code here -- print scheduling info elements matching to the place
+					//print scheduling info elements matching to the place
+					printf("----------------------------------------\n");
+					printf("%d. Schedule Name : %s (%d)\n", ndPtr, strncpy( schedInfo, ndPtr, strlen(ndPtr)), sched_convertType (*typeName) ); // 내용, 유형  
+					printf("When : %d. %d\n",strncpy(schedInfo, ndPtr, strlen(ndPtr)) ,strncpy(schedInfo, ndPtr, strlen(ndPtr))  ); // 월, 일   
+					printf("Where : %s\n", place ); // 장소 
+					
 					ndPtr = list_getNextNd(ndPtr); //get the next node from the list
 					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
 					
@@ -128,7 +142,12 @@ int main(int argc, char *argv[]) {
 					ndPtr = list;
 					while (list_isEndNode(ndPtr) == 0)
 					{
-						//file code here -- print scheduling info elements matching to the place
+						//print scheduling info elements matching to the place
+						printf("----------------------------------------\n");
+						printf("%d. Schedule Name : %s (%d)\n", ndPtr, typeName, sched_convertType (*typeName) ); // 내용, 유형  
+						printf("When : %d. %d\n", ,  ); // 월, 일   
+						printf("Where : %s\n", ); // 장소
+						
 						ndPtr = list_getNextNd(ndPtr); //get the next node from the list
 						schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
 						
